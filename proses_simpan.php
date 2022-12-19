@@ -43,6 +43,7 @@ if(isset($_POST['Daftar'])){
       echo "Maaf, Terjadi kesalahan saat mencoba untuk menyimpan data ke database.";
       echo "<br><a href='welcome.php'>Kembali Ke Form</a>";
     }
+    mysqli_query($conn, "UPDATE users SET status = 'Pending' WHERE id = $id");
 }
 else{
   echo ('????');

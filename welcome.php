@@ -22,6 +22,12 @@
         else if($row['Status'] == "Pending"){
             echo "<br>anda sudah mendaftar silahkan menunggu untuk verifikasi";
         }
+        else if($row['Status'] == "Ditolak"){
+            echo "<br>Pendaftaran anda ditolak silahkan mendaftar kembali untuk memperbaiki data anda <a href='daftar.php'>Daftar</a>";
+        }
+        else{
+            echo "<br>anda sudah terdaftar";
+        }
 
         echo "<br><a href='logout.php'>Logout</a>";
     }
