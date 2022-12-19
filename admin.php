@@ -1,9 +1,8 @@
-<?php include("welcome.php"); ?>
+<?php include("config.php"); ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="css/styles.css" type="text/css" media="all" />
     <title>Pendaftaran Siswa Baru | SMK Coding</title>
 </head>
 
@@ -31,26 +30,42 @@
         <?php
         $sql = "SELECT * FROM calon_peserta";
         $query = mysqli_query($conn, $sql);
-
         while($siswa = mysqli_fetch_array($query)){
             echo "<tr>";
-            echo "<td>".$siswa['NIK']."</td>";
+                        echo "<td>".$siswa['NIK']."</td>";
             echo "<td>".$siswa['nama']."</td>";
             echo "<td>".$siswa['alamat']."</td>";
             echo "<td>".$siswa['jenis_kelamin']."</td>";
             echo "<td>".$siswa['tempat'].$siswa['tanggal_lahir']."</td>";
             echo "<td>".$siswa['No_Telfon']."</td>";
-            if($row['Status'] == "Pending")
-                echo "<td><a href = > Approve</a><a href=> Deny</a></td>";
-            if($row['Status'] == "Success")
-                echo "<td>Approved</td>";
-            echo "<td>";
-            echo "</td>";
+            echo "<td><a href = 'foto/".$siswa['foto']."'> Foto</a> <a href = 'ktp/".$siswa['ktp']."'> KTP</a></td>";
+            $query2 = "SELECT * FROM users where id = '{$siswa['id']}'";
+            $result = mysqli_query($conn, $query2);
+            $row = mysqli_fetch_array($result);
+            $status = $row['Status'];
+            if($status == 'Pending'){
+                echo "<form action='' method='post'>";
+                echo "<td><button name='approve' class='btn' type='submit'>approve</button>";
+                echo " <button name='deny' class='btn' type='submit'>Deny</button></td>";
+                echo "</form>";
+            }
+            else{
+                echo "<td>'Approved'</td>";
+            }
+            if (isset($_POST['approve'])) {
+                $sql = "UPDATE users SET Status = 'Approve' WHERE id = '{$siswa['id']}'";
+                $query3 = mysqli_query($conn, $sql);
+            }
+            else if (isset($_POST['deny'])) {
+                //delete
+                $sql = "UPDATE users SET Status = 'Ditolak' WHERE id = '{$siswa['id']}'";
+                $sql = "DELETE FROM calon_peserta WHERE id={$siswa['id']}";
+                $query4 = mysqli_query($conn, $sql);
+            }
 
-            echo "</tr>";
         }
         ?>
-
+    </tr>
 
     </tbody>
     </table>
