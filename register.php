@@ -67,7 +67,7 @@
                     // echo "</div>";
                     $msg = "<div class='alert alert-info'>Register success! go to login to login</div>";
                 } else {
-                    $msg = "<div class='alert alert-danger'>Something wrong went.</div>";
+                    $msg = "<div class='alert alert-danger'>Something went wrong.</div>";
                 }
             } else {
                 $msg = "<div class='alert alert-danger'>Password and Confirm Password do not match</div>";
@@ -81,6 +81,7 @@
 
 <head>
     <title>Login Form</title>
+    <link rel="stylesheet" href="/style.css">
     <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" />

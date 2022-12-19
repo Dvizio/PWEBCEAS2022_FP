@@ -1,0 +1,96 @@
+*{
+    
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+
+}
+
+img{
+  position: relative;
+  align-items: center;
+}
+
+body{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: url('../images/nusapenida.jpg');
+  background-size: cover;
+}
+
+.container{
+  
+  width: 100%;
+  max-width: 650px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 100px;
+  margin-top: 10px;
+  /* padding-right: 5000px; */
+  /* margin: 0 28px; */
+  border-radius: 10px;
+}
+
+.form-title{
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 6px;
+  color: white;
+  text-shadow:  2px 2px 2px black;
+  border-bottom: solid 1px white;
+}
+
+.main-user-info{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.user-input-box:nth-child(1n){
+  justify-content: end;
+}
+
+.user-input-box{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-bottom: 15px;
+  margin-right: 53px;
+}
+
+.user-input-box label{
+  width: 95%;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 5px 0;
+}
+
+.user-input-box input{
+  height: 40px;
+  width: 95%;
+  border-radius: 7px;
+  outline: none;
+  border: 1px solid grey;
+  padding: 0 10px;
+}
+
+.gender-details-box {
+  padding-left: 55px;
+  color: white;
+}
+
+.file-input{
+  /* justify-content: space-between; */
+  display: block;
+  padding-left: 51px;
+  color: white;
+}
+
+.form-submit-btn{
+  margin-left: 50px;
+}

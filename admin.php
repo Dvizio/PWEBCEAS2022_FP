@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="css/styles.css" type="text/css" media="all" />
     <title>Pendaftaran Siswa Baru | SMK Coding</title>
 </head>
 

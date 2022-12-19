@@ -2,10 +2,12 @@
 <!DOCTYPE html>
 <head>
   <title>Aplikasi CRUD dengan PHP</title>
-  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="css/stylee.css" type="text/css" media="all" />
+ 
 </head>
 <body>
-  <h1>Tambah Data Siswa</h1>
+<div class="container">
+  <h1 class="form-title">Tambah Data Siswa</h1>
   <form method="post" action="proses_simpan.php" enctype="multipart/form-data">
   <table cellpadding="8">
   <tr>
@@ -51,5 +53,6 @@
   <button type="submit" class="btn btn-primary" value="Daftar" name="Daftar">Daftar</button>
   <a href="welcome.php"><input type="button" class="btn btn-danger" value="Batal"></a>
   </form>
+</div>
 </body>
 </html>

@@ -71,6 +71,7 @@ if (isset($_POST['submit'])) {
 
 <head>
     <title>Login Form - Brave Coder</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css" media="all" />
     <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" />
