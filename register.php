@@ -1,4 +1,4 @@
-<!-- Code by Brave Coder - https://youtube.com/BraveCoder -->
+
 
 <?php
     //Import PHPMailer classes into the global namespace
@@ -31,7 +31,7 @@
             $msg = "<div class='alert alert-danger'>{$email} - This email address has been already exists.</div>";
         } else {
             if ($password === $confirm_password) {
-                $sql = "INSERT INTO users (name, email, password, code,stats) VALUES ('{$name}', '{$email}', '{$password}', '{$code}', '{$status}')";
+                $sql = "INSERT INTO users (name, email, password, code,status) VALUES ('{$name}', '{$email}', '{$password}', '{$code}', '{$status}')";
                 $result = mysqli_query($conn, $sql);
 
                 if ($result) {

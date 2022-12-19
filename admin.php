@@ -1,4 +1,4 @@
-<?php include("config.php"); ?>
+<?php include("welcome.php"); ?>
 
 <!DOCTYPE html>
 <html>
@@ -39,14 +39,17 @@
             echo "<td>".$siswa['jenis_kelamin']."</td>";
             echo "<td>".$siswa['tempat'].$siswa['tanggal_lahir']."</td>";
             echo "<td>".$siswa['No_Telfon']."</td>";
-            echo "<td><a href = 'foto/".$siswa['foto']."'> Foto</a> <a href = 'ktp/".$siswa['ktp']."'> KTP</a></td>";
-            echo "<td>Approve Deny</td>";
+            if($row['Status'] == "Pending")
+                echo "<td><a href = > Approve</a><a href=> Deny</a></td>";
+            if($row['Status'] == "Success")
+                echo "<td>Approved</td>";
             echo "<td>";
             echo "</td>";
 
             echo "</tr>";
         }
         ?>
+
 
     </tbody>
     </table>
