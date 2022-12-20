@@ -67,8 +67,8 @@
                         </div>
                     </div>
                     <div class="content-wthree">
-                        <h2>Login Now</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        <h2>Pendaftaran Ujian Calon Pegawai</h2>
+                        <p>Kementrian Kelautan dan Perikanan Provinsi Jawa Timur</p>
                         <?php echo $msg; ?>
                         <form action="" method="post">
                             <input type="email" class="email" name="email" placeholder="Enter Your Email" required>

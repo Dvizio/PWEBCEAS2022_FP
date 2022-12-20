@@ -106,8 +106,8 @@ if (isset($_POST['submit'])) {
                         </div>
                     </div>
                     <div class="content-wthree">
-                        <h2>Forgot Password</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        <h2>Lupa password? Tinggal reset saja!</h2>
+                        <p>Jangan sampai kelalaianmu mempengaruhi bakti mu bagi kelautan dan perikanan Jawa Timur.</p>
                         <?php echo $msg; ?>
                         <form action="" method="post">
                             <input type="email" class="email" name="email" placeholder="Enter Your Email" required>

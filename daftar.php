@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="container">
-  <h1 class="form-title">Tambah Data Siswa</h1>
+  <h1 class="form-title">Tambah Data Calon Pegawai</h1>
   <form method="post" action="proses_simpan.php" enctype="multipart/form-data">
   <table cellpadding="8">
   <tr>

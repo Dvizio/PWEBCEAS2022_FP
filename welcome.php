@@ -67,10 +67,13 @@ body {
   color: var(--text-color);
   /*For animation dark mode*/
   transition: .4s;
+  text-align: center;
 }
 .home__btns {
-  display: flex;
-  align-items: center;
+  padding-top: 40px;
+  margin: 0;
+  position: absolute;
+  left: 50%;
 }
 body {
   margin: 0;
@@ -96,21 +99,21 @@ body {
     if (mysqli_num_rows($query) > 0) {
         $row = mysqli_fetch_assoc($query);
 
-        echo "<h1> Welcome " . $row['name'];
+        echo "<h1> Welcome, " . $row['name'] . "!";
         echo"</h1>";
-        echo "<h2>Status :" . $row['Status'];
+        echo "<h2>Status: " . $row['Status'];
         echo "</h2>";
         if($row['Status'] == "Belum Mendaftar"){
             echo "<br><a href='daftar.php'>Daftar</a>";
         }
         else if($row['Status'] == "Pending"){
-            echo "<br>anda sudah mendaftar silahkan menunggu untuk verifikasi";
+            echo "<br>Anda sudah mendaftar, silahkan menunggu untuk verifikasi.";
         }
         else if($row['Status'] == "Ditolak"){
-            echo "<br>Pendaftaran anda ditolak silahkan mendaftar kembali untuk memperbaiki data anda <a href='daftar.php'>Daftar</a>";
+            echo "<br>Mohon maaf, pendaftaran anda ditolak. Silahkan mendaftar kembali untuk memperbaiki data anda. <a href='daftar.php'>Daftar</a>";
         }
         else{
-            echo "<br>anda sudah terdaftar";
+            echo "<br>Selamat, anda dapat mengikuti ujian! Silahkan perlihatkan halaman ini kepada petugas di hari ujian dimulai.";
         }
     }
 ?>

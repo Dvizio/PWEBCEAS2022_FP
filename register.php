@@ -116,8 +116,8 @@
                         </div>
                     </div>
                     <div class="content-wthree">
-                        <h2>Register Now</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        <h2>Daftar sekarang!</h2>
+                        <p>Mari berbakti untuk kelestarian kelautan dan perikanan Jawa Timur.</p>
                         <?php echo $msg; ?>
                         <form action="" method="post">
                             <input type="text" class="name" name="name" placeholder="Enter Your Name" value="<?php if (isset($_POST['submit'])) { echo $name; } ?>" required>

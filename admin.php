@@ -3,12 +3,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Pendaftaran Siswa Baru | SMK Coding</title>
+    <title>Admin Pendaftaran Ujian Calon Pegawai Kementrian Kelautan dan Perikanan Provinsi Jawa Timur </title>
 </head>
 
 <body>
     <header>
-        <h3>Siswa yang sudah mendaftar</h3>
+        <h3>Calon Pegawai yang Sudah Mendaftar</h3>
     </header>
     <br>
 
